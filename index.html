@@ -419,6 +419,29 @@
       .x-dkt__play::before { content: ""; border-left: 10px solid #fff; border-block: 6px solid transparent; margin-left: 3px; }
       @media (max-width: 860px) { .x-dkt__in { grid-template-columns: 1fr; } }
 
+      /* deark about, six services, approach, project list (Nov 2026 refresh) */
+      .x-dka { display: grid; grid-template-columns: 1.15fr 1fr; gap: clamp(32px, 6vw, 80px); align-items: start; }
+      .x-dka .x-dk-head { margin-bottom: 22px; }
+      .x-dka__text p { font-size: 17px; line-height: 1.7; color: #5f656c; }
+      .x-dka__text p + p { margin-top: 16px; }
+      .x-dka__vm { display: grid; gap: 20px; }
+      .x-dka__vm .x-dk-card p { font-size: 16px; }
+      .x-dk-cards--six { grid-template-columns: repeat(3, 1fr); }
+      .x-dk-for { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+      .x-dk-for li { background: #fff; border-radius: 4px; border-top: 3px solid var(--x-dk-orange); padding: 24px 22px 26px; font-size: 15px; line-height: 1.6; color: #5f656c; }
+      .x-dk-for b { display: block; margin-bottom: 8px; font: 600 18px/1.3 var(--x-sans); color: var(--x-dk-char); }
+      .x-dk-why { margin-top: clamp(36px, 5vw, 56px); display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 4vw, 56px); }
+      .x-dk-why h3 { font-family: var(--x-sans) !important; font-weight: 600 !important; font-size: 22px !important; color: var(--x-dk-char); }
+      .x-dk-why p { margin-top: 10px; font-size: 16px; line-height: 1.7; color: #5f656c; }
+      .x-dkl { margin-top: clamp(40px, 6vw, 64px); display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px clamp(20px, 3vw, 40px); }
+      .x-dkl h3 { font: 500 12px/1.5 var(--x-sans) !important; letter-spacing: 0.14em !important; text-transform: uppercase; color: #c23d1a; padding-bottom: 10px; border-bottom: 2px solid var(--x-dk-orange); }
+      .x-dkl ul { list-style: none; margin: 0; padding: 0; }
+      .x-dkl li { padding: 12px 0; border-bottom: 1px solid #e3e5e8; }
+      .x-dkl li b { display: block; font: 600 16px/1.35 var(--x-sans); color: var(--x-dk-char); }
+      .x-dkl li span { display: block; margin-top: 2px; font-size: 14px; color: #5f656c; }
+      @media (max-width: 960px) { .x-dk-cards--six, .x-dkl { grid-template-columns: 1fr 1fr; } .x-dk-for { grid-template-columns: 1fr 1fr; } .x-dka { grid-template-columns: 1fr; } }
+      @media (max-width: 620px) { .x-dk-cards--six, .x-dkl, .x-dk-for, .x-dk-why { grid-template-columns: 1fr; } }
+
       /* deark contact strip */
       .x-dkc { border-top: 4px solid var(--x-dk-orange); background: #fff; }
       .x-dkc__list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); border-top: 1px solid #e3e5e8; }
@@ -792,7 +815,7 @@
                     <img class="x-biz__bg" src="web-feature-wall.jpg" alt="" aria-hidden="true" loading="lazy" />
                     <div class="x-biz__logo"><img src="logo-deark.png" alt="DeArk Décor and Home Solutions logo" /></div>
                     <h3>DeArk Décor and Home Solutions</h3>
-                    <p>Interior design studio for homes and workplaces: residential, commercial, renovations and design consultation.</p>
+                    <p>Interior design and home solutions for homes, short-term rentals, show homes and workplaces.</p>
                     <a class="x-btn" href="#/deark">Explore DeArk Décor</a>
                   </article>
                 </div>
@@ -1047,13 +1070,13 @@
           <!-- ============ DEARK DÉCOR ============ -->
           <div class="x-route x-deark" data-route="deark" hidden style="border-top: 0; padding: 0">
             <section class="x-dkh" aria-label="DeArk Décor and Home Solutions">
-              <img src="web-living-earthy.jpg" alt="A living room with a curved blue sofa in blues and warm browns, designed by DeArk Décor" />
+              <img src="web-deark-hero-lounge.jpg" alt="A sunken lounge with grey sectional sofas opening onto a modern kitchen, designed by DeArk Décor" />
               <div class="x-wrap x-dkh__in">
                 <div class="x-dkh__logo x-reveal"><img src="logo-deark.png" alt="DeArk Décor and Home Solutions logo" /></div>
                 <div class="x-reveal">
-                  <p class="x-eyebrow">Interior Design Studio | Accra</p>
-                  <h1>You dream it. <span>We create it.</span></h1>
-                  <p class="x-dkh__sub">DeArk Décor and Home Solutions turns ordinary spaces into homes and workplaces with class, creativity and a personal touch.</p>
+                  <p class="x-eyebrow">Interior Design and Home Solutions | Accra</p>
+                  <h1>Where beauty meets <span>purpose.</span></h1>
+                  <p class="x-dkh__sub">We transform ordinary spaces into extraordinary environments that reflect beauty, purpose, identity and inspiration.</p>
                   <div class="x-dkh__cta">
                     <a class="x-btn x-btn--dk" href="#/contact/deark">Start Your Project</a>
                     <a class="x-btn x-btn--dkghost" href="#/deark/dk-projects">See Our Projects</a>
@@ -1062,37 +1085,70 @@
               </div>
             </section>
 
-            <section class="x-sec" id="dk-services">
+            <section class="x-sec" id="dk-about">
+              <div class="x-wrap x-dka">
+                <div class="x-reveal">
+                  <div class="x-dk-head">
+                    <p class="x-eyebrow">Welcome to DeArk</p>
+                    <h2 class="x-dk-sec-h">Every space has a purpose. <span>Every design tells a story.</span></h2>
+                  </div>
+                  <div class="x-dka__text">
+                    <p>A space is more than a place to live, work or gather. It shapes how we think, feel, create and live.</p>
+                    <p>Through a thoughtful blend of culture, colour, texture, creativity and innovative design, we craft interiors that enrich the lives of those who experience them. We don't simply decorate spaces. We create environments where purpose comes alive and possibilities unfold.</p>
+                  </div>
+                </div>
+                <div class="x-dka__vm">
+                  <div class="x-dk-card x-reveal">
+                    <i aria-hidden="true"></i>
+                    <h3>Our vision</h3>
+                    <p>To inspire and transform lives through purposeful design, creating beautiful and meaningful environments that awaken creativity, encourage growth and empower people to flourish.</p>
+                  </div>
+                  <div class="x-dk-card x-reveal">
+                    <i aria-hidden="true"></i>
+                    <h3>Our mission</h3>
+                    <p>To provide innovative, thoughtful and culturally inspired interior design and home solutions that combine functionality, beauty and purpose for individuals, families, property owners, developers and organisations.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="x-sec x-dk-alt" id="dk-services">
               <div class="x-wrap">
                 <div class="x-dk-head x-reveal">
                   <p class="x-eyebrow">What we do</p>
-                  <h2 class="x-dk-sec-h">Spaces designed around the people who use them.</h2>
+                  <h2 class="x-dk-sec-h">Thoughtfully designed spaces. Meaningful experiences.</h2>
+                  <p class="x-dk-lead">From family homes and Airbnb properties to show homes and corporate offices, we consider how each space is used, how it feels and how it can serve your personal or commercial goals.</p>
                 </div>
-                <div class="x-dk-cards">
+                <div class="x-dk-cards x-dk-cards--six">
                   <div class="x-dk-card x-reveal">
                     <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M5 19 20 7l15 12" /><path d="M9 16v18h22V16" /><path d="M14 34v-8a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8M14 28h12" /></svg>
-                    <h3>Residential Interiors</h3>
-                    <p>Living rooms, bedrooms, kids' and teen rooms and home offices designed around how you live.</p>
+                    <h3>Residential Interior Design and Decoration</h3>
+                    <p>Homes that reflect the personalities, lifestyles and practical needs of the people who live in them, from a new apartment to a refreshed family residence.</p>
+                  </div>
+                  <div class="x-dk-card x-reveal">
+                    <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="13" cy="20" r="7" /><circle cx="13" cy="20" r="2" /><path d="M20 20h15M30 20v5M35 20v4" /></svg>
+                    <h3>Airbnb and Short-Term Rentals</h3>
+                    <p>Having designed and furnished several Airbnb properties, we create inviting, durable and easy-to-maintain spaces that shape a memorable guest experience.</p>
+                  </div>
+                  <div class="x-dk-card x-reveal">
+                    <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M5 20 20 8l15 12" /><path d="M9 17v17h22V17" /><path d="M13 25c2.2-3 4.6-4.5 7-4.5s4.8 1.5 7 4.5c-2.2 3-4.6 4.5-7 4.5s-4.8-1.5-7-4.5z" /><circle cx="20" cy="25" r="1.6" /></svg>
+                    <h3>Show Homes and Property Staging</h3>
+                    <p>Show homes for developers and property owners, turning empty rooms into lifestyle settings that help buyers see the possibilities within.</p>
                   </div>
                   <div class="x-dk-card x-reveal">
                     <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M7 34V8h16v26M23 16h10v18M4 34h32" /><path d="M12 13h2M17 13h2M12 19h2M17 19h2M12 25h2M17 25h2M27 21h2M27 27h2" /></svg>
-                    <h3>Commercial Interiors</h3>
-                    <p>Offices and commercial spaces that work hard and look the part.</p>
+                    <h3>Commercial and Corporate Interiors</h3>
+                    <p>Offices and commercial spaces that reflect your organisation's identity and support comfort, collaboration and productivity.</p>
                   </div>
                   <div class="x-dk-card x-reveal">
-                    <svg viewBox="0 0 40 40" aria-hidden="true"><rect x="6" y="6" width="20" height="9" rx="1.5" /><path d="M26 10.5h4v8H17v5" /><rect x="14.5" y="23.5" width="5" height="11" rx="1.5" /></svg>
-                    <h3>Renovations &amp; Remodelling</h3>
-                    <p>Transforming tired spaces from the walls up.</p>
+                    <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M9 21v-6a3 3 0 0 1 3-3h16a3 3 0 0 1 3 3v6" /><path d="M5 21a2.5 2.5 0 0 1 5 0v4h20v-4a2.5 2.5 0 0 1 5 0v8H5z" /><path d="M9 29v4M31 29v4" /></svg>
+                    <h3>Interior Styling and Furnishing</h3>
+                    <p>No structural changes needed: furniture, colour, lighting, textures and accessories brought together into one cohesive interior.</p>
                   </div>
                   <div class="x-dk-card x-reveal">
                     <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4a11 11 0 0 1 6.5 19.9c-1.2.9-1.9 2.2-1.9 3.6V29h-9.2v-1.5c0-1.4-.7-2.7-1.9-3.6A11 11 0 0 1 20 4z" /><path d="M16 33h8M17.5 36.5h5" /></svg>
-                    <h3>Design Consultation</h3>
-                    <p>Expert advice on layout, colour, furniture and finishes.</p>
-                  </div>
-                  <div class="x-dk-card x-reveal">
-                    <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="15" /><path d="M5 20h30M20 5c4 4.2 6 9.2 6 15s-2 10.8-6 15c-4-4.2-6-9.2-6-15s2-10.8 6-15z" /></svg>
-                    <h3>Diaspora Home Projects</h3>
-                    <p>We furnish, renovate and transform homes in Ghana for clients living abroad.</p>
+                    <h3>Consultation and Space Planning</h3>
+                    <p>Creative direction, layout recommendations and furnishing guidance that make the most of your space and bring clarity to your vision.</p>
                   </div>
                 </div>
                 <p class="x-dk-note x-reveal">Custom upholstery through our sister studio, DeArk Reupholstery Studio (<a href="https://www.instagram.com/dearkreupholsterystudio/" target="_blank" rel="noopener">@dearkreupholsterystudio</a>).</p>
@@ -1112,30 +1168,31 @@
             <section class="x-sec x-dk-alt" id="dk-projects">
               <div class="x-wrap">
                 <div class="x-dk-head x-reveal">
-                  <p class="x-eyebrow">Featured projects</p>
-                  <h2 class="x-dk-sec-h">Every detail, intentional.</h2>
+                  <p class="x-eyebrow">Selected projects</p>
+                  <h2 class="x-dk-sec-h">Homes, show houses and workplaces.</h2>
+                  <p class="x-dk-lead">Apartments, private residences, show homes, offices and creative sets in and around Accra.</p>
                 </div>
                 <div class="x-dkp-grid">
                   <article class="x-dkp x-reveal">
-                    <figure class="x-dkp__img"><img src="web-familia-unida.jpg" alt="The living room of Project Familia Unida at KASS Towers" loading="lazy" /></figure>
+                    <figure class="x-dkp__img"><img src="web-deark-kass-living.jpg" alt="The living room of Project Familia Unida at Kass Towers" loading="lazy" /></figure>
                     <div class="x-dkp__body">
-                      <p class="x-dkp__meta">2024 · KASS Towers, Airport Residential</p>
+                      <p class="x-dkp__meta">2024 · Kass Towers, Airport Residential Area</p>
                       <h3>Project Familia Unida</h3>
                       <p>A luxury apartment with bespoke furniture and a tailored colour palette.</p>
                     </div>
                   </article>
                   <article class="x-dkp x-reveal">
-                    <figure class="x-dkp__img"><img src="web-lakeview.jpg" alt="Vases styled on a sideboard at Project Lakeview Villas" loading="lazy" /></figure>
+                    <figure class="x-dkp__img"><img src="web-deark-home-office.jpg" alt="A home office with a green feature wall, a solid wood desk and an Africa map artwork" loading="lazy" /></figure>
                     <div class="x-dkp__body">
-                      <p class="x-dkp__meta">2025 · Model home</p>
-                      <h3>Project Lakeview Villas</h3>
-                      <p>A model home where every detail is intentional, designed for elegance and serenity.</p>
+                      <p class="x-dkp__meta">Home office</p>
+                      <h3>A Workspace With Character</h3>
+                      <p>A green feature wall, a solid wood desk and African art bring focus and identity to a room for work.</p>
                     </div>
                   </article>
                   <article class="x-dkp x-dkp--text x-reveal">
                     <p class="x-dkp__big">3<small>Themed bedrooms</small></p>
                     <div class="x-dkp__body">
-                      <p class="x-dkp__meta">Prampram · Three-bedroom home</p>
+                      <p class="x-dkp__meta">Private residence · Prampram</p>
                       <h3>Project Gratitude</h3>
                       <ul class="x-dkp__rooms">
                         <li style="--sw: #6f9bc4">Cool Blue</li>
@@ -1144,6 +1201,54 @@
                       </ul>
                     </div>
                   </article>
+                </div>
+                <div class="x-dkl x-reveal">
+                  <div>
+                    <h3>Apartments and condominiums</h3>
+                    <ul>
+                      <li><b>Solaris Apartments</b><span>Ringway Estate, Osu, Accra</span></li>
+                      <li><b>Park Apartments by Mobus</b><span>Cantonments, Accra</span></li>
+                      <li><b>Park Apartments by Mobus</b><span>East Legon Hills, Greater Accra</span></li>
+                      <li><b>Kass Towers</b><span>Airport Residential Area, Accra</span></li>
+                      <li><b>Villaggio Primavera</b><span>Accra</span></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3>Show houses and property staging</h3>
+                    <ul>
+                      <li><b>Olive and Grove Apartments show house</b><span>East Legon Hills, Greater Accra</span></li>
+                      <li><b>Edgewood Realty Apartments show house</b><span>Tema, Greater Accra</span></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3>Corporate offices and home offices</h3>
+                    <ul>
+                      <li><b>Tech Era office</b><span>Osu, Accra</span></li>
+                      <li><b>E. Wells office</b><span>East Legon, Accra</span></li>
+                      <li><b>Emporium Office</b><span>Mövenpick Hotel area, Accra</span></li>
+                      <li><b>Centre for Biodiversity Conservation Research, University of Ghana</b><span>Legon, Accra</span></li>
+                      <li><b>Home office</b><span>East Legon Hills, Greater Accra</span></li>
+                      <li><b>Home office</b><span>Adenta, Greater Accra</span></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3>Creative spaces and set design</h3>
+                    <ul>
+                      <li><b>The Salary Scramble podcast set</b><span>East Legon, Accra</span></li>
+                      <li><b>Onpoint Virtual Assistants commercial set</b><span>East Legon, Accra</span></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3>Private residences</h3>
+                    <ul>
+                      <li><b>Private residence</b><span>Sakumono, Greater Accra</span></li>
+                      <li><b>Private residence</b><span>Millennium City, Kasoa</span></li>
+                      <li><b>Private residence</b><span>Oyarifa, Greater Accra</span></li>
+                      <li><b>Private residence</b><span>Ayimensa, Greater Accra</span></li>
+                      <li><b>Private residence</b><span>Prampram, Greater Accra</span></li>
+                      <li><b>Private residence</b><span>Near Sandbox Beach, South La, Accra</span></li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </section>
@@ -1155,13 +1260,49 @@
                   <h2 class="x-dk-sec-h">Rooms we've brought to life.</h2>
                 </div>
                 <div class="x-dkg x-reveal">
-                  <button class="x-dkg__item" type="button" data-lb="dkg" data-lb-i="0" data-title="DeArk Décor"><img src="web-living-blue.jpg" alt="A living room with grey-blue sofas and artwork" data-set="dkg" data-cap="Living room" loading="lazy" /><span>Living room</span></button>
-                  <button class="x-dkg__item" type="button" data-lb="dkg" data-lb-i="1" data-title="DeArk Décor"><img src="web-home-office.jpg" alt="A home office with a green feature wall and wooden desk" data-set="dkg" data-cap="Home office" loading="lazy" /><span>Home office</span></button>
-                  <button class="x-dkg__item" type="button" data-lb="dkg" data-lb-i="2" data-title="DeArk Décor"><img src="web-kids-room.jpg" alt="A children's bedroom with pink twin beds and study desks" data-set="dkg" data-cap="Children's bedroom" loading="lazy" /><span>Children's bedroom</span></button>
-                  <button class="x-dkg__item" type="button" data-lb="dkg" data-lb-i="3" data-title="DeArk Décor"><img src="web-teen-room.jpg" alt="A neutral teen bedroom with mustard accents" data-set="dkg" data-cap="A room designed to grow with them" loading="lazy" /><span>A room designed to grow with them</span></button>
-                  <button class="x-dkg__item" type="button" data-lb="dkg" data-lb-i="4" data-title="DeArk Décor"><img src="web-feature-wall.jpg" alt="A living room feature wall with framed artwork and cove lighting" data-set="dkg" data-cap="Feature wall and artwork" loading="lazy" /><span>Feature wall and artwork</span></button>
+                  <button class="x-dkg__item" type="button" data-lb="dkg" data-lb-i="0" data-title="DeArk Décor"><img src="web-deark-living-blue-curtains.jpg" alt="A living room with beige sofas, blue cushions and blue curtains" data-set="dkg" data-cap="Living room" loading="lazy" /><span>Living room</span></button>
+                  <button class="x-dkg__item" type="button" data-lb="dkg" data-lb-i="1" data-title="DeArk Décor"><img src="web-deark-kass-bedroom.jpg" alt="A bedroom at Kass Towers with a rattan lamp and woven wall plates" data-set="dkg" data-cap="Bedroom, Kass Towers" loading="lazy" /><span>Bedroom, Kass Towers</span></button>
+                  <button class="x-dkg__item" type="button" data-lb="dkg" data-lb-i="2" data-title="DeArk Décor"><img src="web-deark-kids-pink.jpg" alt="A children's bedroom with pink twin beds and study desks" data-set="dkg" data-cap="Children's bedroom" loading="lazy" /><span>Children's bedroom</span></button>
+                  <button class="x-dkg__item" type="button" data-lb="dkg" data-lb-i="3" data-title="DeArk Décor"><img src="web-deark-dining-table.jpg" alt="A round black dining table set for four, seen from above" data-set="dkg" data-cap="Dining for four" loading="lazy" /><span>Dining for four</span></button>
+                  <button class="x-dkg__item" type="button" data-lb="dkg" data-lb-i="4" data-title="DeArk Décor"><img src="web-deark-bedroom-yellow.jpg" alt="A bedroom with yellow cushions, a blue floral bedspread and abstract art" data-set="dkg" data-cap="Bedroom in yellow and blue" loading="lazy" /><span>Bedroom in yellow and blue</span></button>
+                  <button class="x-dkg__item" type="button" data-lb="dkg" data-lb-i="5" data-title="DeArk Décor"><img src="web-deark-living-curved-sofa.jpg" alt="A living room with a curved blue sofa and orange accent chairs" data-set="dkg" data-cap="Living room" loading="lazy" /><span>Living room</span></button>
+                  <button class="x-dkg__item" type="button" data-lb="dkg" data-lb-i="6" data-title="DeArk Décor"><img src="web-deark-kids-safari.jpg" alt="A children's bedroom with mint-green twin beds and safari prints" data-set="dkg" data-cap="Children's bedroom" loading="lazy" /><span>Children's bedroom</span></button>
+                  <button class="x-dkg__item" type="button" data-lb="dkg" data-lb-i="7" data-title="DeArk Décor"><img src="web-deark-kitchen-dining.jpg" alt="An open kitchen with wood cabinets beside a black dining table" data-set="dkg" data-cap="Kitchen and dining" loading="lazy" /><span>Kitchen and dining</span></button>
+                  <button class="x-dkg__item" type="button" data-lb="dkg" data-lb-i="8" data-title="DeArk Décor"><img src="web-deark-bedroom-terracotta.jpg" alt="A bedroom with green and terracotta cushions and armchairs by the window" data-set="dkg" data-cap="Bedroom" loading="lazy" /><span>Bedroom</span></button>
+                  <button class="x-dkg__item" type="button" data-lb="dkg" data-lb-i="9" data-title="DeArk Décor"><img src="web-deark-reading-corner.jpg" alt="An armchair and floor lamp against a green wall with African portrait artwork" data-set="dkg" data-cap="Reading corner" loading="lazy" /><span>Reading corner</span></button>
+                  <button class="x-dkg__item" type="button" data-lb="dkg" data-lb-i="10" data-title="DeArk Décor"><img src="web-deark-living-grey.jpg" alt="A living room with grey-blue sofas and framed artwork" data-set="dkg" data-cap="Living room" loading="lazy" /><span>Living room</span></button>
+                  <button class="x-dkg__item" type="button" data-lb="dkg" data-lb-i="11" data-title="DeArk Décor"><img src="web-deark-bedroom-blue.jpg" alt="A bedroom with an upholstered bed, blue-grey curtains and sunburst artwork" data-set="dkg" data-cap="Bedroom" loading="lazy" /><span>Bedroom</span></button>
+                  <button class="x-dkg__item" type="button" data-lb="dkg" data-lb-i="12" data-title="DeArk Décor"><img src="web-deark-living-mustard.jpg" alt="An upstairs lounge with a mustard sofa and abstract artwork by the stair rail" data-set="dkg" data-cap="Upstairs lounge" loading="lazy" /><span>Upstairs lounge</span></button>
+                  <button class="x-dkg__item" type="button" data-lb="dkg" data-lb-i="13" data-title="DeArk Décor"><img src="web-deark-dining-mirrors.jpg" alt="A dining room with wooden chairs and three arched mirrors" data-set="dkg" data-cap="Dining room" loading="lazy" /><span>Dining room</span></button>
+                  <button class="x-dkg__item" type="button" data-lb="dkg" data-lb-i="14" data-title="DeArk Décor"><img src="web-deark-bedroom-green.jpg" alt="A bedroom in olive green and cream with woven wall plates" data-set="dkg" data-cap="Bedroom" loading="lazy" /><span>Bedroom</span></button>
                 </div>
                 <div class="x-dkg__more x-reveal"><a class="x-btn x-btn--dkline" href="https://www.instagram.com/deark_decor/" target="_blank" rel="noopener">See more on Instagram</a></div>
+              </div>
+            </section>
+
+            <section class="x-sec x-dk-alt" id="dk-approach">
+              <div class="x-wrap">
+                <div class="x-dk-head x-reveal">
+                  <p class="x-eyebrow">Our approach</p>
+                  <h2 class="x-dk-sec-h">We design with people and purpose in mind.</h2>
+                  <p class="x-dk-lead">Meaningful design begins with understanding people: your aspirations, lifestyle, business objectives and the experience you want your space to create.</p>
+                </div>
+                <ul class="x-dk-for x-reveal">
+                  <li><b>For a family</b>Nurturing connection and belonging.</li>
+                  <li><b>For an Airbnb owner</b>Enhancing the guest experience.</li>
+                  <li><b>For a developer</b>Helping buyers envision a property's potential.</li>
+                  <li><b>For an organisation</b>Creating an inspiring and functional workplace.</li>
+                </ul>
+                <div class="x-dk-why x-reveal">
+                  <div>
+                    <h3>Why DeArk?</h3>
+                    <p>Because you deserve more than a beautiful space. You deserve an environment that reflects who you are, supports where you are going and inspires what you can become.</p>
+                  </div>
+                  <div>
+                    <h3>Our promise</h3>
+                    <p>We approach every space with creativity, intentionality, excellence and deep appreciation for the people who will experience it, creating interiors that are captivating, functional, purposeful and personal.</p>
+                  </div>
+                </div>
               </div>
             </section>
 
@@ -1183,7 +1324,8 @@
               <div class="x-wrap">
                 <div class="x-dk-head x-reveal">
                   <p class="x-eyebrow">Get in touch</p>
-                  <h2 class="x-dk-sec-h">Tell us about your space.</h2>
+                  <h2 class="x-dk-sec-h">Let's reimagine your space.</h2>
+                  <p class="x-dk-lead">Whether you are furnishing your dream home, preparing an Airbnb for guests, developing a show home or transforming a corporate environment, we're here to help bring your vision to life.</p>
                 </div>
                 <ul class="x-dkc__list x-reveal">
                   <li><span>Phone</span><a href="tel:+233257194060">025 719 4060</a></li>
