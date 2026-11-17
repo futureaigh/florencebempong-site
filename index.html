@@ -657,6 +657,15 @@ window.addEventListener('hashchange',function(){gtag('event','page_view',{page_l
         .x-journey li.is-brand a { display: contents; }
         .x-journey__logo { width: 72px; height: 72px; margin: 0; }
       }
+
+      /* Client logo strip */
+      .x-marquee li.x-client { flex-direction: column; gap: 12px; padding: 14px 0; font: inherit; font-style: normal; color: inherit; width: 190px; margin-inline: 14px; }
+      .x-marquee li.x-client::after { content: none; }
+      .x-client__logo { height: 84px; width: 100%; display: grid; place-items: center; }
+      .x-client__logo img { max-height: 84px; max-width: 150px; object-fit: contain; filter: grayscale(1) contrast(1.05); opacity: 0.78; transition: filter .3s, opacity .3s, transform .3s; }
+      .x-client:hover .x-client__logo img { filter: none; opacity: 1; transform: scale(1.04); }
+      .x-client__mono { width: 76px; height: 76px; border-radius: 50%; display: grid; place-items: center; background: #FAF6F1; border: 1.5px solid #C9A45C; color: #4A0B1E; font: 600 18px/1 var(--x-serif); letter-spacing: 0.04em; }
+      .x-client__name { font: 500 11px/1.4 var(--x-sans); letter-spacing: 0.12em; text-transform: uppercase; color: #6b5d58; text-align: center; white-space: normal; max-width: 170px; }
     </style>
   <style>
 .x-act__row{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px}
@@ -825,30 +834,30 @@ window.addEventListener('hashchange',function(){gtag('event','page_view',{page_l
               <div class="x-marquee">
                 <div class="x-marquee__track">
                   <ul>
-                    <li>E.Wells Realty &amp; Consultancy</li>
-                    <li>Accra School of Real Estate</li>
-                    <li>Diaspora African Forum</li>
-                    <li>SWIM</li>
-                    <li>Global Mandate Economic Summit</li>
-                    <li>Z3 Ghana</li>
-                    <li>Kingdom Citizens in Real Estate</li>
-                    <li>The Signet Hour Show</li>
-                    <li>The KSM Show</li>
-                    <li>WOMB</li>
-                    <li>Global Media Village</li>
+                    <li class="x-client"><span class="x-client__logo"><img src="client-ewells.png" alt="E.Wells Realty &amp; Consultancy logo" loading="lazy" /></span><span class="x-client__name">E.Wells Realty &amp; Consultancy</span></li>
+                    <li class="x-client"><span class="x-client__logo"><img src="client-asre.png" alt="Accra School of Real Estate logo" loading="lazy" /></span><span class="x-client__name">Accra School of Real Estate</span></li>
+                    <li class="x-client"><span class="x-client__logo"><img src="client-daf.jpg" alt="Diaspora African Forum logo" loading="lazy" /></span><span class="x-client__name">Diaspora African Forum</span></li>
+                    <li class="x-client"><span class="x-client__logo"><img src="client-swim.png" alt="SWIM logo" loading="lazy" /></span><span class="x-client__name">SWIM</span></li>
+                    <li class="x-client"><span class="x-client__logo"><img src="client-gmes.jpg" alt="Global Mandate Economic Summit logo" loading="lazy" /></span><span class="x-client__name">Global Mandate Economic Summit</span></li>
+                    <li class="x-client"><span class="x-client__logo"><b class="x-client__mono">Z3</b></span><span class="x-client__name">Z3 Ghana</span></li>
+                    <li class="x-client"><span class="x-client__logo"><b class="x-client__mono">KCIRE</b></span><span class="x-client__name">Kingdom Citizens in Real Estate</span></li>
+                    <li class="x-client"><span class="x-client__logo"><b class="x-client__mono">SH</b></span><span class="x-client__name">The Signet Hour Show</span></li>
+                    <li class="x-client"><span class="x-client__logo"><img src="client-ksm.png" alt="KSM Live logo" loading="lazy" /></span><span class="x-client__name">KSM Live</span></li>
+                    <li class="x-client"><span class="x-client__logo"><b class="x-client__mono">WOMB</b></span><span class="x-client__name">WOMB</span></li>
+                    <li class="x-client"><span class="x-client__logo"><b class="x-client__mono">GMV</b></span><span class="x-client__name">Global Media Village</span></li>
                   </ul>
                   <ul aria-hidden="true">
-                    <li>E.Wells Realty &amp; Consultancy</li>
-                    <li>Accra School of Real Estate</li>
-                    <li>Diaspora African Forum</li>
-                    <li>SWIM</li>
-                    <li>Global Mandate Economic Summit</li>
-                    <li>Z3 Ghana</li>
-                    <li>Kingdom Citizens in Real Estate</li>
-                    <li>The Signet Hour Show</li>
-                    <li>The KSM Show</li>
-                    <li>WOMB</li>
-                    <li>Global Media Village</li>
+                    <li class="x-client"><span class="x-client__logo"><img src="client-ewells.png" alt="" loading="lazy" /></span><span class="x-client__name">E.Wells Realty &amp; Consultancy</span></li>
+                    <li class="x-client"><span class="x-client__logo"><img src="client-asre.png" alt="" loading="lazy" /></span><span class="x-client__name">Accra School of Real Estate</span></li>
+                    <li class="x-client"><span class="x-client__logo"><img src="client-daf.jpg" alt="" loading="lazy" /></span><span class="x-client__name">Diaspora African Forum</span></li>
+                    <li class="x-client"><span class="x-client__logo"><img src="client-swim.png" alt="" loading="lazy" /></span><span class="x-client__name">SWIM</span></li>
+                    <li class="x-client"><span class="x-client__logo"><img src="client-gmes.jpg" alt="" loading="lazy" /></span><span class="x-client__name">Global Mandate Economic Summit</span></li>
+                    <li class="x-client"><span class="x-client__logo"><b class="x-client__mono">Z3</b></span><span class="x-client__name">Z3 Ghana</span></li>
+                    <li class="x-client"><span class="x-client__logo"><b class="x-client__mono">KCIRE</b></span><span class="x-client__name">Kingdom Citizens in Real Estate</span></li>
+                    <li class="x-client"><span class="x-client__logo"><b class="x-client__mono">SH</b></span><span class="x-client__name">The Signet Hour Show</span></li>
+                    <li class="x-client"><span class="x-client__logo"><img src="client-ksm.png" alt="" loading="lazy" /></span><span class="x-client__name">KSM Live</span></li>
+                    <li class="x-client"><span class="x-client__logo"><b class="x-client__mono">WOMB</b></span><span class="x-client__name">WOMB</span></li>
+                    <li class="x-client"><span class="x-client__logo"><b class="x-client__mono">GMV</b></span><span class="x-client__name">Global Media Village</span></li>
                   </ul>
                 </div>
               </div>
